@@ -17,7 +17,7 @@ public class App extends Application {
         var scene = new Scene(paneRoot, 640, 480);
         stage.setScene(scene);
         stage.show();
-      tablero tablero = new tablero();
+      Tablero tablero = new Tablero();
       tablero.mostrarPorConsola();
     }
 
