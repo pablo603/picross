@@ -14,7 +14,7 @@ public class TableroVista extends GridPane {
 
     public TableroVista(Tablero tablero) {
         this.tablero = tablero;
-        int numero1eny[] = {tablero.num_colum};
+        int numero1eny[] = {0,0,0,0,0,0,0,0,0,0};
         for (int y = 0; y <= tablero.num_fila; y++) {
             int numero1 = 0;
             if (y == tablero.num_fila) {
@@ -44,14 +44,14 @@ public class TableroVista extends GridPane {
                         r.setFill(Color.LIGHTGRAY);
                         this.add(r, x, y);
                         numero1 += tablero.tablero_resuelto1[y][x];
-                        numero1eny[y] += tablero.tablero_resuelto1[y][x];
+                        numero1eny[x] += tablero.tablero_resuelto1[y][x];
                     }
                 }
 
             }
         }
 
-        this.setMaxWidth(TAM_X * tablero.num_colum);
+        this.setMaxWidth(TAM_X * tablero.num_colum );
         this.setMaxHeight(TAM_Y * tablero.num_fila);
 
     }
